@@ -18,42 +18,35 @@
     <div class="container">
       <header id="encabezado">
         <div>
-          <!-- <img
-            src=""
-            width="200px"
-          /> -->
-          <h2>DL</h2>
+          <h2 class="logo-dl"><i class="fa-solid fa-cat"></i>DL</h2>
         </div>
         <nav>
           <input type="checkbox" id="check"/><label for="check" class="chekbtn"><i class="fa-solid fa-bars"></i></label>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Acerca de mi</a></li>
-            <li><a href="#">Trabajos</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contactos</a></li>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca-de-mi">Acerca de mi</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
           </ul>
         </nav>
       </header>
       <main id="seccion-principal">
-        <section class="seccion-1">
+        <section class="seccion-1" id="inicio">
           <div class="acerca-de">
             <h2>Hola</h2>
             <p class="parrafo1">Soy una <span class="color1">DEVELOPER</span><br> Mi nombre es <span class="color2">Danae Lescano</span>
             </p>
             <ul class="redes2">
-              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+              <li><a href="#"><i class="fa-solid fa-envelope"></i></a></li>
+              <li><a href="https://www.linkedin.com/in/danae-l-049a08243/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="https://github.com/Lescano713" target="_blank"><i class="fa-brands fa-github"></i></a></li>
             </ul>
-            <button>Contáctame</button>
+            <a href="#contacto"><button>Contáctame</button></a>
           </div>
-          <div class="acerca-imagen">
-            <img src="imagenes/chica-audifonos.png"
-            alt="chicaconaudifonos"/>
-          </div>
+          <img src="imagenes/chica-audifonos.png" alt="chicaconaudifonos"/>
         </section>
-        <section class="seccion-2">
+        <section class="seccion-2" id="acerca-de-mi">
           <div class="about-me">
             <h2>Sobre mi</h2>
             <p>Mi trayectoria en el camino de la tecnología comienza en Senati, una institución para técnicos profesionales en el Perú, donde obtuve ciertos conocimientos en el campo de las redes y seguridad de la información. Mi curiosidad por este mundo me llevó al desarrollo web por lo que me convertí en autodidacta, apoyándome en instituciones en línea donde pude adquirir nuevos conocimientos .</p>
@@ -61,11 +54,11 @@
           <div class="estudios">
             <h2>Formación Académica</h2>
             <div>
-              <img src="https://1000marcas.net/wp-content/uploads/2020/03/logo-Cisco.png" alt="cisco-logo" ></li>
-              <img src="https://avatars.githubusercontent.com/u/4975968?s=280&v=4" ></li>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/FreeCodeCamp_logo.png/320px-FreeCodeCamp_logo.png" width="100px" alt=""></li>
-              <img src="https://aprendoencasa.org/wp-content/uploads/2020/04/logo-EGG-Educacionload.png" alt="egg"></li>
-            </d>
+              <img src="https://1000marcas.net/wp-content/uploads/2020/03/logo-Cisco.png" alt="cisco-logo" title="Cisco" ></li>
+              <img src="https://play-lh.googleusercontent.com/Y9T2c7ZUQyfUdVbj_J9-8tBDDVknyBg3lM3xUuMNp6phK_yKOkQTeqx2jphrwW1Z6jts=s128-rw" title="alura" ></li>
+              <img src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" title="FreeCodeCamp"></li>
+              <img src="https://play-lh.googleusercontent.com/Q2WM6jLXyE4paDR0lgmQVEzhVWAK40W_OtTCX9YZPLuP0EE_Pq-RbbQwPTgWY6k7TA" alt="egg" title="egg education"></li>
+            </div>
           </div>
         </section>
         <section class="seccion-3">
@@ -83,10 +76,12 @@
             <ul class="soft skills">
               <li>Tolerancia</li>
               <li>Trabajo en equipo</li>
+              <lo>liderazo</lo>
+              <lo>Trabajo</lo>
             </ul>
           </div>
         </section>
-        <section class="seccion-4">
+        <section class="seccion-4" id="proyectos">
           <h2>Proyectos</h2>
             <div class="card">
               <h1>Título 1</h1>
@@ -124,6 +119,17 @@
               <a href="#"><p>Leer más</p></a>
             </div>
         </section>
+        <section class="seccion-5" id="servicios">
+          <h2>Servicios</h2>
+          <div>
+            <p>Web development</p>
+            <img src="" alt="">
+          </div>
+          <div>
+            <p>Asesor de red</p>
+            <img src="" alt="">
+          </div>
+        </section>
       </main>
       <footer>
         <form id="contacto">
@@ -153,6 +159,6 @@
             width="100px"
         /></a>
       </footer>
-    </div>
+    </di>
   </body>
 </html>

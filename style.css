@@ -15,13 +15,22 @@ html{
     background: linear-gradient(90deg, rgba(13,8,47,1) 0%, rgba(100,38,111,1) 50%, rgba(183,9,73,1) 100%);
     color: #d3d0da;
 }
+a{
+    text-decoration: none;
+    color: var(--color5);
+}
 header{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
-    opacity: 0.8;
-    background: var(--color1);
+    background: rgba(13,4,32,0.8);
+}
+.logo-dl{
+    color: var(--color8);
+}
+.dropdown-logo{
+    display: none;
 }
 #check{
     display: none;
@@ -43,17 +52,22 @@ nav ul{
     justify-content: center;
 }
 nav a{
-    margin: 0.6em;
+    margin: 0.8em;
     text-decoration: none;
     color: var(--color6);
     font-size: 22px;
     font-weight: 500;
     padding: 5px;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 nav a:hover{
-    border-radius: 20px;
-    /* box-shadow: 2px 2px 4px 5px var(--color4); */
-    text-shadow: 2px 2px var(--color8);
+    border-radius: 10px;
+    color: var(--color3);
+    box-shadow: 0 0 4px 3px rgb(9, 126, 141);
+    border: 2px solid var(--color3);
+    letter-spacing: 2px;
 }
 
 .seccion-1{
@@ -64,9 +78,33 @@ nav a:hover{
     font-size: large;
     color: var(--color6);
     font-family: monospace;
+    padding: 1em 1em 0;
+}
+.seccion-1 button{
+    padding: 0.8em;
+    color: var(--color8);
+    font-size: 18px;
+    background-color: var(--color1);
+    border: 2px solid var(--color8);
+    cursor: pointer;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+}
+.seccion-1 button:hover{
+    border: 2px solid var(--color3);
+    color: var(--color3);
+    box-shadow: 0 0 6px 6px rgb(38, 94, 111);
+    letter-spacing: 2px;
+    border-radius: 10px;
+    transform: scale(1);
+}
+.seccion-1 img{
+    width: 24%;
+    padding-left: 2em;
 }
 .acerca-de{
-    text-align: start;
+    padding: 2em;
 }
 .acerca-de span{
     font-weight: 600;
@@ -82,14 +120,17 @@ nav a:hover{
     font-size: 25px;
     text-shadow: 4px 4px 2px var(--color7);
 }
-.acerca-imagen{
-    width: 30%;
-}
 .redes2{
     display: flex;
 }
 .redes2 li{
     margin: 1em 0.5em;
+}
+.redes2 i{
+    color: var(--color4);
+}
+.redes2 i:hover{
+    color: var(--color8);
 }
 .seccion-2{
     padding: 2em;
@@ -128,10 +169,13 @@ nav a:hover{
 }
 .seccion-3{
     display: flex;
+    padding: 1em;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .seccion-3 .skills{
+    padding: 1em;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
@@ -219,7 +263,7 @@ input, textarea{
     border: 2px solid #d47c59;
     border-radius: 3px;
 }
-button{
+footer button{
     width: 100%;
     padding: 0.3em;
     border-radius: 3px;
