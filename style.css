@@ -15,9 +15,10 @@
     --color11: #ff6474;
     --color-opacity: rgba(0,0,0,0.5) ;
     --color-header: rgba(13,4,32,0.8);
-    --fondo-gradient: linear-gradient(90deg, rgba(13,8,47,1) 0%, rgba(100,38,111,1) 50%, rgba(183,9,73,1) 100%);
+    --fondo-gradient: radial-gradient(circle, rgba(78,22,85,1) 0%, rgba(93,17,83,1) 48%, rgba(122,6,80,1) 80%, rgba(133,2,79,1) 100%);
     --path-logo: polygon(9% 4%, 6% 9%, 8% 36%, 11% 45%, 9% 64%, 18% 78%, 39% 91%, 51% 95%, 63% 91%, 71% 86%, 82% 79%, 93% 64%, 91% 45%, 93% 36%, 94% 9%, 90% 3%, 69% 16%, 34% 16%);
     ;
+    --fondo-cajitas: radial-gradient(circle, rgba(98,37,106,1) 0%, rgba(120,17,93,1) 100%);
     --logo-alura: url("https://avatars.githubusercontent.com/u/64977466?s=280&v=4");
     --icon-html: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/1200px-HTML5_Badge.svg.png");
     --font-family-nav: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -80,7 +81,6 @@ header{
         }
         & a:hover{
             color: var(--color3);
-            box-shadow: 0 0 4px 3px rgb(9, 126, 141);
             border-bottom: 4px solid var(--color3);
             letter-spacing: 2px;
         }
@@ -144,19 +144,20 @@ header{
     & .color1{
         color: var(--color8);
         font-size: 30px;
-        text-shadow: 4px 4px 4px  #711074;
+        text-shadow: 4px 4px 4px  #921996;
     }
     & .color2{
-        color: var(--color4);
+        color: #c860d1;
         font-size: 25px;
-        text-shadow: 4px 4px 2px var(--color7);
+        text-shadow: 4px 4px 2px black
     }
     & .redes2{
         display: flex;
         & li{
             margin: 1em 0.5em;
             & i{
-                color: var(--color4);
+                color: #2f8ab4;
+                font-size: 19px;
             } 
             & i:hover{
                 color: var(--color8);
@@ -174,23 +175,46 @@ header{
     font-family: monospace;
     line-height: 20px;
     letter-spacing: 1px;
+    & h2{
+        padding: 0.3em;
+        padding-right: 0;
+        display: block;
+        border-right: 2px solid var(--color3);
+        animation: typing 3s steps(12) infinite alternate, blink 1s steps(1) infinite;
+        width: 0;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    & h2::before{
+        content: "";
+        border: 2px solid var(--color3);
+        border-radius: 20px;
+        margin-right: 10px;
+    }
     & .about-me{
         width: 50%;
-        & h2{
-            padding: 0.5em;
-        }
-        & h2::before{
-            content: "";
-            border: 2px solid var(--color3);
-            border-radius: 20px;
-            margin-right: 10px;
-        }
         & p{
             padding: 0.5em 0;
         }
     }
 }
+@keyframes typing {
+    from {
+    width: 32%;
+    }
+    to {
+    width: 0;
+    }
+}
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
 .estudios{
+    & h2{
+        animation: typing2 3s steps(12) infinite alternate, blink 1s steps(1) infinite;
+    }
     & h2::before{
         content: "";
         border: 2px solid var(--color8);
@@ -213,121 +237,89 @@ header{
         filter: hue-rotate(100deg);
     }
 }
+@keyframes typing2 {
+    from {
+    width: 100%;
+    }
+    to {
+    width: 0;
+    }
+}
 .seccion-3{
     display: flex;
     padding: 2em;
-    flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 500px;
+    justify-content: space-around;
+    height: 600px;
     & .skills{
-        padding: 1em;
+        padding: 0.5em;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-gap: 0 20px;
+        align-items: center;
     }
-    & div{
-        padding: 0.3em;
-        height: 50%;
+    & .cont{
+        padding: 0.2em;
+        height: 100%;
         width: 45%;
         & h2{
             letter-spacing: 4px;
             font-weight: 600;
             font-size: 28px;
             color: var(--color5);
+            padding-right: 0;
+            
         }
         & ul{
             height: 200px;
             & li{
-                height: 50%;
+                padding: 0.5em;
                 width: 70%;
                 letter-spacing: 2px;
                 width: 100%;
-                height: 65%;
+                height: 70%;
                 border: 4px solid var(--color1);
                 border-radius: 5px;
                 background-color: rgba(48, 17, 77,0.4);
-                &::before{
-                    display: block;
-                    content: "";
-                    border-radius: 5px 0;
-                    width: 8%;
-                    height: 7%;
-                    border-top: 4px solid var(--color3);
-                    border-left: 4px solid var(--color3);
-                    padding: 0;
-                    position: absolute;
-                    transform: translate(-4px,-4px);
-                }
-                & h3{
-                    font-size: 27px;
-                    padding: 0.4em 0;
-                }
-                & p{
-                    font-size: 13px;
-                    display: block;
-                }
-                &:hover{
-                    background-image: var(--logo-alura);
-                    background-size: contain;
-                    transition: all 0.5s;
-                    opacity: 0.7;
-                    color: transparent; 
-                    /* filter: hue-rotate(30deg); */
-                }
-            }
-            & .skill1{
-                border: 4px solid var(--color3);
-                &::before{
-                    border-top: 4px solid var(--color1);
-                    border-left: 4px solid var(--color1);
-                    width: 5%;
-                    height: 3%;
-                }
-            }
-            & .skill2{
-                &::before{
-                    height: 9%;
-                    width: 8.1%;
-                    border-right: 4px solid var(--color3);
-                }
-            }
-            
-            & .skill3{
-                border: 4px solid var(--color3);
-                &::before{
-                    border-top: 4px solid var(--color1);
-                    border-left: 4px solid var(--color1);
-                    width: 3%;
-                    height: 3%;
-                }
-            }
-            & .skill4{
-                border: 4px solid var(--color3);
-                &::before{
-                    border-top: 4px solid var(--color1);
-                    border-left: 4px solid var(--color1);
-                }
-            }
-            & .skill5{
-                &::before{
-                    height: 7%;
-                    width: 8.1%;
-                    border-right: 4px solid var(--color3);
-                }
-            }
-            & .skill7{
-                border: 4px solid var(--color3);
-                &::before{
-                    border-top: 4px solid var(--color1);
-                    border-left: 4px solid var(--color1);
-                    border-right: 4px solid var(--color1);;
-                    width: 8.1%;
-                    height: 4%;
+                text-align: center;
+                & i{
+                    font-size: 50px;
+                    padding-bottom: 0.1em;
                 }
             }
         }
-    }   
+    }
+    & .cert{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+        grid-template-areas: 
+        "header header"
+        "side2 side1";
+        grid-gap :10px;
+        & .instituciones{
+            grid-area: side2;
+            display: grid;
+            grid-gap: 10px;
+            align-items: center;
+            grid-template-rows: 1fr 1fr 1fr 1fr ;
+        }
+
+    }
+    & .certificados{
+        grid-area: side1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        & .certi{
+            border: 2px solid var(--color1);
+            width: 90%;
+            height: 24%;
+            border-radius: 5px;
+            margin: 0.3em 0;
+        }  
+    } 
 }
 .seccion-4{
     background-color: var(--color-opacity);
@@ -348,9 +340,11 @@ header{
     "side3 side4";
     & h2{
         grid-area: header;
-        font-size: 30px;
+        font-size: 33px;
         font-family: monospace;
         letter-spacing: 3px;
+        color: var(--color8);
+        text-shadow: 0 0 5px rgba(248, 239, 113, 0.9);
     }
     & .alura{
         grid-area: subt1;
@@ -424,8 +418,10 @@ header{
     "sidebar1 midle sidebar2";
     & h2{
         grid-area: header;
-        letter-spacing: 3px;
+        letter-spacing: 4px;
         align-self: end;
+        color: var(--color3);
+        text-shadow: 0 0 9px rgba(41, 180, 230,0.9);
         font-size: 30px;
     }
     & .net{
@@ -443,6 +439,7 @@ header{
         border: 4px solid var(--color-opacity);
         text-align: center;
         padding: 1em;
+        background: var(--fondo-cajitas);
         & p{
             font-size: 20px;
             padding: 0.5em;
@@ -485,8 +482,8 @@ footer{
             text-align: center;
         }
         & fieldset{
-            background-color: rgba(55, 26, 75, 0.4);
-            box-shadow: 2px 2px 3px 4px rgba(0,0,0,0.3);
+            background-color: rgba(75, 26, 71, 0.4);
+            box-shadow: 2px 2px 3px 4px rgba(0,0,0,0.5);
             padding: 1em;
             width: 100%;
             border: none;
@@ -531,35 +528,29 @@ footer{
             } 
         }
     }
-    & div{
-        position: relative;
+    & .tuerca{
+        position: fixed;
+        right: 0;
+        bottom: 0;
         height: 50px;
         width: 10%;
+        transition: all 1s;
+        display: block;
+        & .settings-bar{
+            display: none;
+        }
         & i{
             font-size: 40px;
             color: var(--color3);
-            position: fixed;
-            z-index: 2;
-            bottom: 20px;
-            right: 20px;
-            cursor: pointer;
         }
-        & .settings{
-            display: none;
-        }
-        &:hover .settings{
+        & #toggle-settings:checked .settings-bar{
             width: 50%;
             height: 10%;
             background-color: #0d0420;
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
-            z-index: 1;
             border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: space-around;
-            transition: all 0.4s;
         }
     }
 }
